@@ -1,0 +1,28 @@
+{
+    "name": "mnapoli/glide-module",
+    "description": "Cross-framework module for Glide",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "GlideModule\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "mnapoli/assembly": "@dev",
+        "league/glide": "0.3.*"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/container-interop/definition-interop.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/mnapoli/assembly.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
