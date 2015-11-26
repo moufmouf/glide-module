@@ -13,8 +13,10 @@ Once installed, you need to register the [definition provider](src/GlideDefiniti
 ```php
 $definitionProvider = new \GlideModule\GlideDefinitionProvider();
 
-// register $definitionProvider
+// register $definitionProvider in your container or framework
 ```
+
+Refer to your framework or container's documentation to learn how to register *definition-interop* modules.
 
 ## Usage
 
@@ -22,13 +24,15 @@ This module registers the Glide server (`League\Glide\Server`) under the `glide`
 
 ## Configuration
 
-You can configure the server by defining a `glide.options` container entry:
+You can configure the server by defining a `glide.options` container entry. That entry should be an array containing Glide options.
+
+Example for a container using array configuration:
 
 ```php
-return [
-    'source' => 'path/to/source/folder',
-    'cache' => 'path/to/cache/folder',
-];
+    'glide.options' => [
+        'source' => 'path/to/source/folder',
+        'cache' => 'path/to/cache/folder',
+    ]
 ```
 
 All the options are passed straight to Glide's `ServerFactory`. Have a look at [the official documentation about configuration](http://glide.thephpleague.com/0.3/config/the-server/) to learn about all the options you can use.
