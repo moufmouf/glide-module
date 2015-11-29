@@ -3,6 +3,9 @@
 namespace GlideModule;
 
 use Assembly\ArrayDefinitionProvider;
+use function Assembly\factory;
+use function Assembly\get;
+use function Assembly\object;
 
 class GlideDefinitionProvider extends ArrayDefinitionProvider
 {
@@ -12,10 +15,10 @@ class GlideDefinitionProvider extends ArrayDefinitionProvider
             // Options are empty by default
             'glide.options' => [],
 
-            'glide.factory' => \Assembly\instance('GlideModule\GlideFactory')
-                ->setConstructorArguments(\Assembly\get('glide.options')),
+            'glide.factory' => object('GlideModule\GlideFactory')
+                ->setConstructorArguments(get('glide.options')),
 
-            'glide' => \Assembly\factory('glide.factory', 'create'),
+            'glide' => factory(get('glide.factory'), 'create'),
         ];
     }
 }
