@@ -1,6 +1,6 @@
 # Glide universal module
 
-This package integrates Glide in any [definition-interop](https://github.com/container-interop/definition-interop) compatible framework/container.
+This package integrates Glide in any [container-interop](https://github.com/container-interop/definition-interop) compatible framework/container.
 
 ## Installation
 
@@ -8,21 +8,15 @@ This package integrates Glide in any [definition-interop](https://github.com/con
 composer require mnapoli/glide-module
 ```
 
-Once installed, you need to register the [definition provider](src/GlideDefinitionProvider.php) into your container:
+Once installed, you need to register the [`GlideModule\GlideServiceProvider`](src/GlideDefinitionProvider.php) into your container.
 
-```php
-$definitionProvider = new \GlideModule\GlideDefinitionProvider();
-
-// register $definitionProvider in your container or framework
-```
-
-Refer to your framework or container's documentation to learn how to register *definition-interop* modules.
+Refer to your framework or container's documentation to learn how to register *service providers*.
 
 ## Usage
 
 This module registers the Glide server (`League\Glide\Server`) under the `glide` key in your service container. You can now inject it in your services. Have a look at [the official documentation](http://glide.thephpleague.com/0.3/simple-example/) to know how to use the server.
 
-Since Glide's server *requires* the `source` and `cache` options to be configured, you must define a `glide.options` entry in your container. That entry should be an array containing Glide options.
+Since **Glide's server requires the `source` and `cache` options to be configured**, you must define a `glide.options` entry in your container. That entry should be an array containing Glide options.
 
 Here is an example using [PHP-DI](http://php-di.org/)'s syntax:
 
