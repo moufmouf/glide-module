@@ -3,6 +3,7 @@
 namespace GlideModule;
 
 use Interop\Container\ContainerInterface;
+use League\Glide\Server;
 use League\Glide\ServerFactory;
 
 class GlideServiceProvider
@@ -10,7 +11,7 @@ class GlideServiceProvider
     public static function getServices()
     {
         return [
-            'glide' => 'createGlide',
+            Server::class => 'createGlide',
             'glide.options' => 'getOptions',
         ];
     }

@@ -14,7 +14,7 @@ Refer to your framework or container's documentation to learn how to register *s
 
 ## Usage
 
-This module registers the Glide server (`League\Glide\Server`) under the `glide` key in your service container. You can now inject it in your services. Have a look at [the official documentation](http://glide.thephpleague.com/0.3/simple-example/) to know how to use the server.
+This module registers the Glide server under the `League\Glide\Server` key in your service container. You can now inject it in your services. Have a look at [the official documentation](http://glide.thephpleague.com/1.0/simple-example/) to know how to use the server.
 
 Since **Glide's server requires the `source` and `cache` options to be configured**, you must define a `glide.options` entry in your container. That entry should be an array containing Glide options.
 
