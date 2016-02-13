@@ -1,6 +1,6 @@
 # Glide universal module
 
-This package integrates Glide in any [container-interop](https://github.com/container-interop/definition-interop) compatible framework/container.
+This package integrates Glide in any [container-interop](https://github.com/container-interop/service-provider) compatible framework/container.
 
 ## Installation
 
