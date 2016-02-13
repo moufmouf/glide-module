@@ -3,10 +3,11 @@
 namespace GlideModule;
 
 use Interop\Container\ContainerInterface;
+use Interop\Container\ServiceProvider\ServiceProvider;
 use League\Glide\Server;
 use League\Glide\ServerFactory;
 
-class GlideServiceProvider
+class GlideServiceProvider implements ServiceProvider
 {
     public static function getServices()
     {
