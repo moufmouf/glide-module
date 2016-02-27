@@ -38,6 +38,15 @@ $pimple['glide.options'] = [
 ];
 ```
 
+### Returning a response
+
+This module automatically configures Glide to generate PSR-7 responses. To use it in a controller, simply inject the `League\Glide\Server` object and use it like this:
+
+```php
+// This returns a PSR-7 response
+return $server->getImageResponse($filename, $options);
+```
+
 ### Advanced options
 
 The `glide.options` array is passed straight to Glide's `ServerFactory`. Have a look at [the official documentation about configuration](http://glide.thephpleague.com/0.3/config/the-server/) to learn about all the options you can use.
