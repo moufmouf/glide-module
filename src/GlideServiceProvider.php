@@ -24,6 +24,10 @@ class GlideServiceProvider implements ServiceProvider
     {
         $options = $container->get('glide.options');
 
+        if (!isset($options['source']) || !isset($options['cache'])) {
+            throw new \Exception('The "source" and "cache" options must be set in the container entry "glide.options"');
+        }
+
         $server = ServerFactory::create($options);
 
         // We override the response factory to return PSR-7 response by default
