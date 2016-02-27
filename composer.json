@@ -10,7 +10,7 @@
     },
     "require": {
         "php": ">=5.4",
-        "container-interop/service-provider": "dev-master",
+        "container-interop/service-provider": "~0.1.0",
         "league/glide": "^1.0"
     }
 }
