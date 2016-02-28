@@ -12,5 +12,10 @@
         "php": ">=5.4",
         "container-interop/service-provider": "~0.2.0",
         "league/glide": "^1.0"
-    }
+    },
+    "require-dev": {
+        "puli/composer-plugin": "^1.0"
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
 }
