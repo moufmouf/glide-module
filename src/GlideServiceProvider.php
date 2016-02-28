@@ -5,7 +5,7 @@ namespace GlideModule;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
 use Interop\Container\ContainerInterface;
-use Interop\Container\ServiceProvider\ServiceProvider;
+use Interop\Container\ServiceProvider;
 use League\Glide\Responses\PsrResponseFactory;
 use League\Glide\Server;
 use League\Glide\ServerFactory;
