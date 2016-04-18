@@ -10,7 +10,7 @@
     },
     "require": {
         "php": ">=5.4",
-        "container-interop/service-provider": "dev-callable as ~0.3.0",
+        "container-interop/service-provider": "dev-callables as ~0.3.0",
         "league/glide": "^1.0"
     },
     "require-dev": {
