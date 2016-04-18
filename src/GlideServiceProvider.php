@@ -12,11 +12,11 @@ use League\Glide\ServerFactory;
 
 class GlideServiceProvider implements ServiceProvider
 {
-    public static function getServices()
+    public function getServices()
     {
         return [
-            Server::class => 'createGlide',
-            'glide.options' => 'getOptions',
+            Server::class => [GlideServiceProvider::class, 'createGlide'],
+            'glide.options' => [GlideServiceProvider::class, 'getOptions'],
         ];
     }
 
